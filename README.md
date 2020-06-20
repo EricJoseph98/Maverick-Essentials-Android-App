@@ -6,3 +6,6 @@ Problem Statement: To develop an online application designed to help customers b
 The motivation for Project:
 1) The need for an application to improve brand visibility of everyday products associated with multiple sectors such as Grocery, Retail, Medicine, Entertainment, Luxury, etc.
 2) Improvement of connectivity between multiple stakeholders such as retailers, distributors, brand organizations/producers, and daily customers through the use of an online application to increase speed and delivery of sales, data analytics to find best selling products and faster checkout of customers in billing queues.
+
+Demo Video Link:
+https://drive.google.com/file/d/1-x3VUsswKV0v8dxsRt7FPXOKY3dskR4J/view?usp=sharing
