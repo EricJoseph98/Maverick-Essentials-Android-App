@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/item_imageview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/item_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Item Name"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/item_imageview"
+        app:layout_constraintTop_toTopOf="@+id/item_imageview" />
+
+    <TextView
+        android:id="@+id/item_brand_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Brand: "
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_name_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/item_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_name_tv" />
+
+    <TextView
+        android:id="@+id/item_unit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="/ "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_price_tv"
+        app:layout_constraintStart_toEndOf="@+id/item_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_price_tv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/item_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rs. "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/item_quantity_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_quantity_tv" />
+
+    <TextView
+        android:id="@+id/item_type_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Type: "
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_imageview"
+        app:layout_constraintEnd_toEndOf="@+id/item_brand_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/item_brand_tv" />
+
+    <TextView
+        android:id="@+id/item_quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Stock:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/item_expiry_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/item_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/item_type_tv" />
+
+    <TextView
+        android:id="@+id/item_expiry_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Expiry : "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_quantity_tv"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_quantity_tv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/item_discount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Discount % : "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_unit_tv"
+        app:layout_constraintEnd_toEndOf="@+id/item_expiry_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_unit_tv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/selected_quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/decrement_quantity_btn"
+        app:layout_constraintTop_toBottomOf="@+id/item_price_tv" />
+
+    <ImageButton
+        android:id="@+id/increment_quantity_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_quantity_tv"
+        app:layout_constraintStart_toEndOf="@+id/selected_quantity_tv"
+        app:layout_constraintTop_toTopOf="@+id/selected_quantity_tv"
+        app:srcCompat="@drawable/increment_one_icon" />
+
+    <ImageButton
+        android:id="@+id/decrement_quantity_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_quantity_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/selected_quantity_tv"
+        app:srcCompat="@drawable/decrement_one_icon" />
+
+    <TextView
+        android:id="@+id/resultant_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_quantity_tv"
+        app:layout_constraintStart_toStartOf="@+id/decrement_quantity_btn"
+        app:layout_constraintTop_toBottomOf="@+id/decrement_quantity_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/blank_space"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultant_price_tv" />
+
+    <ImageButton
+        android:id="@+id/add_to_cart_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_quantity_tv"
+        app:layout_constraintEnd_toEndOf="@+id/item_discount_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_discount_tv"
+        app:layout_constraintTop_toTopOf="@+id/selected_quantity_tv"
+        app:srcCompat="@drawable/shop_cart_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

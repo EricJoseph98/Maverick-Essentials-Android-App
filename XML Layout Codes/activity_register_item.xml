@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterItem">
+
+    <EditText
+        android:id="@+id/item_name_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Item Name"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_img"
+        app:layout_constraintTop_toTopOf="@+id/item_img" />
+
+    <TextView
+        android:id="@+id/item_register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Add new store item"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/store_title_tv"
+        app:srcCompat="@android:color/holo_blue_dark" />
+
+    <EditText
+        android:id="@+id/item_brand_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Item Brand"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/item_img"
+        app:layout_constraintEnd_toEndOf="@+id/item_name_txt"
+        app:layout_constraintStart_toStartOf="@+id/item_name_txt"
+        app:layout_constraintTop_toBottomOf="@+id/item_name_txt"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/item_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_brand_txt"
+        app:layout_constraintStart_toStartOf="@+id/item_brand_txt"
+        app:layout_constraintTop_toBottomOf="@+id/item_brand_txt" />
+
+    <TextView
+        android:id="@+id/item_type_lbl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Select Item Type"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_type_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/item_img"
+        app:layout_constraintStart_toStartOf="@+id/item_img"
+        app:layout_constraintTop_toTopOf="@+id/item_type_spinner" />
+
+    <TextView
+        android:id="@+id/item_quanity_unit_lbl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Item Quantity Unit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_lbl"
+        app:layout_constraintStart_toStartOf="@+id/item_type_lbl"
+        app:layout_constraintTop_toBottomOf="@+id/item_type_lbl" />
+
+    <Spinner
+        android:id="@+id/item_unit_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/item_quanity_unit_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_spinner"
+        app:layout_constraintStart_toStartOf="@+id/item_type_spinner"
+        app:layout_constraintTop_toTopOf="@+id/item_quanity_unit_lbl" />
+
+    <EditText
+        android:id="@+id/item_quantity_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Item Quantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/item_unit_spinner"
+        app:layout_constraintStart_toStartOf="@+id/item_quanity_unit_lbl"
+        app:layout_constraintTop_toBottomOf="@+id/item_quanity_unit_lbl" />
+
+    <EditText
+        android:id="@+id/item_price_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:ems="10"
+        android:hint="Item Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/item_quantity_txt"
+        app:layout_constraintEnd_toEndOf="@+id/item_unit_spinner"
+        app:layout_constraintStart_toEndOf="@+id/item_quantity_txt"
+        app:layout_constraintTop_toTopOf="@+id/item_quantity_txt" />
+
+    <EditText
+        android:id="@+id/expiry_date_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Item Expiry Date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/item_quantity_txt"
+        app:layout_constraintStart_toStartOf="@+id/item_quantity_txt"
+        app:layout_constraintTop_toBottomOf="@+id/item_quantity_txt" />
+
+    <EditText
+        android:id="@+id/item_discount_percent_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Discount Percentage"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/expiry_date_txt"
+        app:layout_constraintEnd_toEndOf="@+id/item_price_txt"
+        app:layout_constraintStart_toStartOf="@+id/item_price_txt"
+        app:layout_constraintTop_toTopOf="@+id/expiry_date_txt" />
+
+    <ImageButton
+        android:id="@+id/register_item_details_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/expiry_date_txt"
+        app:layout_constraintTop_toBottomOf="@+id/expiry_date_txt"
+        app:srcCompat="@drawable/tick_mark" />
+
+    <ImageButton
+        android:id="@+id/clear_item_details_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/register_item_details_btn"
+        app:layout_constraintStart_toStartOf="@+id/item_discount_percent_txt"
+        app:layout_constraintTop_toTopOf="@+id/register_item_details_btn"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/confirm_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Confirm"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/register_item_details_btn"
+        app:layout_constraintStart_toStartOf="@+id/register_item_details_btn"
+        app:layout_constraintTop_toBottomOf="@+id/register_item_details_btn" />
+
+    <TextView
+        android:id="@+id/clear_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/clear_item_details_btn"
+        app:layout_constraintStart_toStartOf="@+id/clear_item_details_btn"
+        app:layout_constraintTop_toTopOf="@+id/confirm_lbl" />
+
+    <TextView
+        android:id="@+id/store_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Store Title"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_register_title"
+        app:layout_constraintStart_toStartOf="@+id/item_register_title"
+        app:layout_constraintTop_toBottomOf="@+id/item_register_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

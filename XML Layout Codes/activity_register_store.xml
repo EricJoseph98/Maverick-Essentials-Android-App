@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterStore">
+
+    <TextView
+        android:id="@+id/store_register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Enter your store details"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/store_name_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/store_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/store_register_title"
+        app:srcCompat="@android:color/holo_purple" />
+
+    <EditText
+        android:id="@+id/store_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Store Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/store_img"
+        app:layout_constraintTop_toTopOf="@+id/store_img" />
+
+    <EditText
+        android:id="@+id/store_owner_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Store Owner Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/store_name_txt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/store_img"
+        app:layout_constraintTop_toTopOf="@+id/store_owner_img" />
+
+    <ImageView
+        android:id="@+id/store_owner_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/store_img"
+        app:layout_constraintStart_toStartOf="@+id/store_img"
+        app:layout_constraintTop_toBottomOf="@+id/store_img"
+        app:srcCompat="@android:color/holo_orange_light" />
+
+    <EditText
+        android:id="@+id/store_address_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Store Full Address"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/store_owner_phone_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_owner_img"
+        app:layout_constraintTop_toBottomOf="@+id/store_owner_img" />
+
+    <TextView
+        android:id="@+id/store_loc_clk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:text="Click to select location on map"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/store_address_txt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/store_address_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_address_txt" />
+
+    <EditText
+        android:id="@+id/store_owner_phone_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Store Owner Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/store_owner_img"
+        app:layout_constraintEnd_toEndOf="@+id/store_owner_name_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_owner_name_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_owner_name_txt" />
+
+    <Spinner
+        android:id="@+id/store_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/store_name_txt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/store_name_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_name_txt" />
+
+    <EditText
+        android:id="@+id/store_city_txt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Store City"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/store_address_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_loc_clk" />
+
+    <TextView
+        android:id="@+id/store_type_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="17dp"
+        android:text="Select Store Type"
+        app:layout_constraintEnd_toEndOf="@+id/store_type_spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/store_type_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/store_name_txt" />
+
+    <EditText
+        android:id="@+id/store_locality_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:ems="10"
+        android:hint="Store Locality"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/store_city_txt"
+        app:layout_constraintEnd_toEndOf="@+id/store_address_txt"
+        app:layout_constraintStart_toEndOf="@+id/store_city_txt"
+        app:layout_constraintTop_toTopOf="@+id/store_city_txt" />
+
+    <EditText
+        android:id="@+id/store_username_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/store_city_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_city_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_timings_txt" />
+
+    <EditText
+        android:id="@+id/store_password_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/store_username_txt"
+        app:layout_constraintEnd_toEndOf="@+id/store_locality_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_locality_txt"
+        app:layout_constraintTop_toTopOf="@+id/store_username_txt" />
+
+    <Button
+        android:id="@+id/store_register_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="REGISTER STORE"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintEnd_toEndOf="@+id/store_password_txt"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/store_username_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_username_txt" />
+
+    <EditText
+        android:id="@+id/store_timings_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Store Timings (Time and Days)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/store_locality_txt"
+        app:layout_constraintStart_toStartOf="@+id/store_city_txt"
+        app:layout_constraintTop_toBottomOf="@+id/store_city_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

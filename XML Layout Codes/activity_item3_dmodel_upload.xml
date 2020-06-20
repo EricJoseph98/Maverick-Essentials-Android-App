@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Item3DModelUpload">
+
+    <TextView
+        android:id="@+id/upload_zip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Zip File Upload Page"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/upload_item_name_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Enter Item Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/upload_store_title_tv"
+        app:layout_constraintStart_toStartOf="@+id/upload_store_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/upload_store_title_tv" />
+
+    <EditText
+        android:id="@+id/upload_item_brand_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Item Brand"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/upload_item_name_et"
+        app:layout_constraintStart_toStartOf="@+id/upload_item_name_et"
+        app:layout_constraintTop_toBottomOf="@+id/upload_item_name_et" />
+
+    <TextView
+        android:id="@+id/item_type_desc_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select Item Type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/upload_item_brand_et"
+        app:layout_constraintStart_toStartOf="@+id/upload_item_brand_et"
+        app:layout_constraintTop_toBottomOf="@+id/upload_item_brand_et" />
+
+    <TextView
+        android:id="@+id/upload_store_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Store Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/upload_zip_title"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/upload_zip_title"
+        app:layout_constraintTop_toBottomOf="@+id/upload_zip_title" />
+
+    <Spinner
+        android:id="@+id/upload_item_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_desc_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_type_desc_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_type_desc_tv" />
+
+    <Button
+        android:id="@+id/upload_zip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select and Upload Zip File"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_desc_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_type_desc_tv"
+        app:layout_constraintTop_toBottomOf="@+id/upload_item_type_spinner" />
+
+    <TextView
+        android:id="@+id/zip_file_instructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Please ensure that all the files, textures and mappings for the 3D model of the Store Item are in the uploaded .zip file"
+        android:textColor="#FD140101"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_zip_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

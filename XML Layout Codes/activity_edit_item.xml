@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditItem">
+
+    <TextView
+        android:id="@+id/item_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Edit existing store item"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_img_for_edit"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/store_title_tv_for_edit"
+        app:srcCompat="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/item_type_lbl_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Item Type"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_img_for_edit"
+        app:layout_constraintStart_toStartOf="@+id/item_img_for_edit"
+        app:layout_constraintTop_toBottomOf="@+id/item_img_for_edit" />
+
+    <TextView
+        android:id="@+id/item_quanity_unit_lbl_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Item Quantity Unit"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_lbl_for_edit"
+        app:layout_constraintStart_toStartOf="@+id/item_type_lbl_for_edit"
+        app:layout_constraintTop_toBottomOf="@+id/item_type_lbl_for_edit" />
+
+    <EditText
+        android:id="@+id/item_quantity_txt_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Item Quantity"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/item_quantity_unit_edit_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_quanity_unit_lbl_for_edit"
+        app:layout_constraintTop_toBottomOf="@+id/item_quanity_unit_lbl_for_edit" />
+
+    <EditText
+        android:id="@+id/item_price_txt_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:hint="Item Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/item_quantity_txt_for_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_edit_tv"
+        app:layout_constraintStart_toEndOf="@+id/item_quantity_txt_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/item_quantity_txt_for_edit" />
+
+    <EditText
+        android:id="@+id/expiry_date_txt_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Item Expiry Date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/item_quantity_txt_for_edit"
+        app:layout_constraintStart_toStartOf="@+id/item_quantity_txt_for_edit"
+        app:layout_constraintTop_toBottomOf="@+id/item_quantity_txt_for_edit" />
+
+    <EditText
+        android:id="@+id/item_discount_percent_txt_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Discount Percentage"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/expiry_date_txt_for_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_price_txt_for_edit"
+        app:layout_constraintStart_toStartOf="@+id/item_price_txt_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/expiry_date_txt_for_edit" />
+
+    <ImageButton
+        android:id="@+id/save_item_edits_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/delete_item_details_btn_for_edit"
+        app:layout_constraintStart_toEndOf="@+id/edit_item_btn"
+        app:layout_constraintTop_toBottomOf="@+id/edit_items_btn_lbl"
+        app:srcCompat="@drawable/tick_mark" />
+
+    <ImageButton
+        android:id="@+id/delete_item_details_btn_for_edit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_item_btn"
+        app:layout_constraintStart_toStartOf="@+id/item_discount_percent_txt_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/edit_item_btn"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/confirm_lbl_for_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Edits"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/save_item_edits_btn"
+        app:layout_constraintStart_toStartOf="@+id/save_item_edits_btn"
+        app:layout_constraintTop_toBottomOf="@+id/save_item_edits_btn" />
+
+    <TextView
+        android:id="@+id/clear_lbl_for_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Item"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_items_btn_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/delete_item_details_btn_for_edit"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/delete_item_details_btn_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/edit_items_btn_lbl"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/store_title_tv_for_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Store Title"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_edit_title"
+        app:layout_constraintStart_toStartOf="@+id/item_edit_title"
+        app:layout_constraintTop_toBottomOf="@+id/item_edit_title" />
+
+    <ImageButton
+        android:id="@+id/edit_item_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/expiry_date_txt_for_edit"
+        app:layout_constraintTop_toBottomOf="@+id/expiry_date_txt_for_edit"
+        app:srcCompat="@drawable/edit_icon" />
+
+    <TextView
+        android:id="@+id/edit_items_btn_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Edit Item"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edit_item_btn"
+        app:layout_constraintStart_toStartOf="@+id/edit_item_btn"
+        app:layout_constraintTop_toBottomOf="@+id/edit_item_btn" />
+
+    <ImageButton
+        android:id="@+id/previous_item_button"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_item_btn"
+        app:layout_constraintStart_toStartOf="@+id/expiry_date_txt_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/edit_item_btn"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <TextView
+        android:id="@+id/previous_item_lbl"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:text="Previous Item"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_items_btn_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/previous_item_button"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="@+id/previous_item_button"
+        app:layout_constraintTop_toTopOf="@+id/edit_items_btn_lbl"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/next_item_button"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/delete_item_details_btn_for_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_discount_percent_txt_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/delete_item_details_btn_for_edit"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <TextView
+        android:id="@+id/next_item_lbl"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="Next Item"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/previous_item_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/next_item_button"
+        app:layout_constraintStart_toStartOf="@+id/next_item_button"
+        app:layout_constraintTop_toTopOf="@+id/previous_item_lbl" />
+
+    <TextView
+        android:id="@+id/item_type_edit_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Item Type"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_type_lbl_for_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_name_edit_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_name_edit_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_type_lbl_for_edit" />
+
+    <TextView
+        android:id="@+id/item_quantity_unit_edit_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Item Quantity"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_quanity_unit_lbl_for_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_type_edit_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_type_edit_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_quanity_unit_lbl_for_edit" />
+
+    <TextView
+        android:id="@+id/item_name_edit_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Item Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/store_title_tv_for_edit"
+        app:layout_constraintStart_toEndOf="@+id/item_img_for_edit"
+        app:layout_constraintTop_toTopOf="@+id/item_img_for_edit" />
+
+    <TextView
+        android:id="@+id/item_brand_edit_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Item Brand"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/item_name_edit_tv"
+        app:layout_constraintStart_toStartOf="@+id/item_name_edit_tv"
+        app:layout_constraintTop_toBottomOf="@+id/item_name_edit_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
